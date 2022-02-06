@@ -1,0 +1,28 @@
+.container {
+    width: 60%;
+}
+li img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+}
+ul {
+    list-style: none;
+    display: grid;
+    place-items: center;
+    margin: 0;
+    padding: 0;
+}
+li h1 {
+    text-transform: capitalize;
+    font-size: 1.8rem;
+}
+.quote {
+    font-size: 1.4rem;
+    text-align: center;
+}
+.title {
+    font-size: 1.2rem;
+    text-align: right;
+    text-transform: capitalize;
+}
