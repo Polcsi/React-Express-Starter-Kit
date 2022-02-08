@@ -1,6 +1,7 @@
 const express = require("express");
 require("dotenv");
 require("express-async-errors"); // do not need try catch block in controllers
+const path = require("path");
 
 const app = express();
 
@@ -16,6 +17,18 @@ app.use(express.json());
 
 //routes
 app.use("/api/v1/people", testRoute);
+
+/* Deployment */
+// Create React build folder
+
+/* app.use(express.static(path.join(__dirname, "client", "build")));
+app.get("/*", function (req, res) {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+}); */
+/* app.use(express.static(path.resolve(__dirname, "client", "build")));
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+}); */
 
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
