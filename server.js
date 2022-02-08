@@ -1,6 +1,6 @@
 const express = require("express");
 require("dotenv");
-require("express-async-errors");
+require("express-async-errors"); // do not need try catch block in controllers
 
 const app = express();
 
